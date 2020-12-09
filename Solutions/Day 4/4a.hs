@@ -29,11 +29,11 @@ result content = sum (map validPass (passWrap content))
 
 validPass :: String -> Int
 validPass pass 
-    | all ((== True) . fieldPres (words pass)) required = 1
+    | all (fieldPres (words pass)) required = 1
     | otherwise = 0
 
 fieldPres :: [String] -> String -> Bool
-fieldPres fields p = any ((== True) . isField p) fields
+fieldPres fields p = any (isField p) fields
 
 isField :: String -> String -> Bool
 isField a b = a == take 3 b

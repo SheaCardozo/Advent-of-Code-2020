@@ -25,5 +25,5 @@ qAnswered group = do
 
 allAns :: Char -> [String] -> Int
 allAns q group 
-    | all ((== True) . (q `elem`)) group = 1
+    | all (q `elem`) group = 1
     | otherwise = 0

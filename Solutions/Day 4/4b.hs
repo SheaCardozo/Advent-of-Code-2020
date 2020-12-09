@@ -16,7 +16,7 @@ hcCheck :: Char -> Bool
 hcCheck x = isDigit x || x `elem` "abcdef"
 
 isInt :: String -> Bool
-isInt x = not (null x) && all (==True) [isDigit i | i <- x]
+isInt x = not (null x) && all isDigit x
 
 valfuns :: [String -> Bool]
 valfuns = [\x -> isInt x && read x >= 1920 && read x <= 2002, 
@@ -49,11 +49,11 @@ result content = sum (map validPass (passWrap content))
 
 validPass :: String -> Int
 validPass pass 
-    | all ((== True) . fieldPres (words pass)) [0..(length required - 1)] = 1
+    | all (fieldPres (words pass)) [0..(length required - 1)] = 1
     | otherwise = 0
 
 fieldPres :: [String] -> Int -> Bool
-fieldPres fields p = any ((== True) . isField p) fields
+fieldPres fields p = any (isField p) fields
 
 isField :: Int -> String -> Bool
 isField a b 
