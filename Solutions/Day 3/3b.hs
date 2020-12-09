@@ -1,7 +1,5 @@
 module Main where
 
-import Lib ()
-
 filename :: FilePath
 filename = "Solutions/Day 3/3.txt"
 

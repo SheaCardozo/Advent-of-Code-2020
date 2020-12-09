@@ -1,7 +1,6 @@
 module Main where
 
-import Lib ()
-import Data.Char ( isDigit, isLower )
+import Data.Char ( isDigit )
 
 filename :: FilePath
 filename = "Solutions/Day 4/4.txt"
