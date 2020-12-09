@@ -3,7 +3,7 @@ module Main where
 import Lib ()
 
 filename :: FilePath
-filename = "Day 1/1.txt"
+filename = "Solutions/Day 1/1.txt"
 
 main :: IO ()
 main = do
