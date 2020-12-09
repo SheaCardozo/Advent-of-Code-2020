@@ -9,7 +9,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result = sum . map isValid 
 
 isValid :: String -> Int

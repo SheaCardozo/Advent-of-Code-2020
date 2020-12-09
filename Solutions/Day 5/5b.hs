@@ -9,7 +9,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result content = do
     let ids = map seatID content
     let fids = [minimum ids..maximum ids]

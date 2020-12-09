@@ -44,7 +44,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result content = sum (map validPass (passWrap content))
 
 validPass :: String -> Int

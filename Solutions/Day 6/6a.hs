@@ -12,7 +12,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result content = foldl groupAsk 0 (splitOn [""] content)
 
 groupAsk :: Int -> [String] -> Int

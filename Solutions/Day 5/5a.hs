@@ -9,7 +9,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result content = maximum (map seatID content)
 
 seatID :: String -> Int

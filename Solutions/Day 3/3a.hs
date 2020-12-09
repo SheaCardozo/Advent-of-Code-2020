@@ -8,7 +8,7 @@ main = do
     contents <- readFile filename
     print . result . lines $ contents
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result =  ski 1 3
 
 ski :: Int -> Int -> [String] -> Int

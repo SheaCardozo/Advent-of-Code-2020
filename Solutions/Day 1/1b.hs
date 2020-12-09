@@ -9,7 +9,7 @@ main = do
     print . result . lines $ contents
 
 
-result ::  [String] -> Int
+result :: [String] -> Int
 result input = head $ filter (/= 0) [ yearCheck x y z (read i) (read j) (read k) 
                 | (x, i) <- zip [1..] input, (y, j) <- zip [1..] input , (z, k) <- zip [1..] input]
 
