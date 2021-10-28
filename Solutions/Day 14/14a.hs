@@ -39,7 +39,7 @@ extNum s
 maskVal :: String -> String -> Int
 maskVal mask val = do
     let vbin = showIntAtBase 2 intToDigit (read val) ""
-    let evbin = ['0' | x <- [1..(36 - length vbin)]] ++ vbin
+    let evbin = ['0' | x <- [1..(length mask - length vbin)]] ++ vbin
     let masked = combM mask evbin
     toDec masked
 
